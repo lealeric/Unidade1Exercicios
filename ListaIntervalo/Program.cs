@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 public class ListaIntervalo
 {
@@ -23,7 +23,7 @@ public class ListaIntervalo
         }
     }
 
-    public bool add()
+    public bool addNovo()
     {
         String resposta; 
         bool ret = false;
@@ -42,9 +42,8 @@ public class ListaIntervalo
 
             try
             {
-                valida(intervalos, intervalo);
-                intervalos.Add(intervalo);
-                ret = true;
+                valida(this.intervalos, intervalo);
+                ret = this.intervalos.Add(intervalo);
             }
             catch (Exception e)
             {
@@ -64,7 +63,7 @@ public class ListaIntervalo
     {
         foreach (Intervalo intervalo in intervalos)
         {
-            Console.WriteLine(intervalo.ToString());
+            Console.WriteLine(String.Format("Data/hora início: {0}, data/hora fim: {1}.", intervalo.getDataHoraInicio().ToString(), intervalo.getDataHoraFim().ToString()));
         }
     }
 
@@ -80,6 +79,10 @@ public class ListaIntervalo
 
         Intervalo intervalo = new Intervalo(dataHoraInicio, dataHoraFim);
         ListaIntervalo lista = new ListaIntervalo(intervalo);
+
+        lista.addNovo();
+
+        lista.imprime();
 
 
     }
