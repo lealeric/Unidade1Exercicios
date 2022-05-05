@@ -23,12 +23,6 @@ public class ListaIntervalo
         }
     }
 
-    static List<DateTime> SortAscending(List<DateTime> lista)
-    {
-        lista.Sort((a, b) => a.CompareTo(b));
-        return lista;
-    }
-
     public bool addNovo()
     {
         String resposta; 
@@ -93,5 +87,3 @@ public class ListaIntervalo
 
     }
 }
-// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
