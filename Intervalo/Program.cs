@@ -28,6 +28,16 @@ public class Intervalo
 
     }
 
+    public DateTime getDataHoraInicio()
+    {
+        return dataHoraInicio;
+    }
+
+    public DateTime getDataHoraFim()
+    {
+        return dataHoraFim;
+    }
+
     public bool temIntersecao(Intervalo i1)
     {
         if (this.dataHoraInicio >= i1.dataHoraInicio && 
